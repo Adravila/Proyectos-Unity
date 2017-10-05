@@ -5,8 +5,7 @@ using UnityEngine;
 public class moverBalon : MonoBehaviour {
 
 	private Rigidbody rb;
-	public float fuerza = 3;
-	public Transform target;
+	public float fuerza = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -22,29 +21,23 @@ public class moverBalon : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider obj){
-		if (obj.gameObject.tag == "Meta_1") {
-			Debug.Log ("choca");
+		// Escena 1
+		if (obj.gameObject.tag == "Meta_1") 
 			Application.LoadLevel(0);
-		}
-		if (obj.gameObject.tag == "Meta_2") {
-			Debug.Log ("choca");
+		// Escena 2
+		if (obj.gameObject.tag == "Meta_2") 
 			Application.LoadLevel(2);
-		}
-		if (obj.gameObject.tag == "Meta_3") {
-			Debug.Log ("chocado");
-			Application.LoadLevel (3);
-		}
+		// Escena 3
+		if (obj.gameObject.tag == "Meta_3") 
+			Application.LoadLevel(3);
 	}
 
 	void OnCollisionEnter(Collision obj){
-		if (obj.gameObject.tag == "Pared") {
+		// Escena 2
+		if (obj.gameObject.tag == "Pared") 
 			transform.position = new Vector3(-9, 1, -9);
-		}
-
-		if (obj.gameObject.tag == "Plataforma") {
-			Debug.Log ("choca");
+		// Escena 4
+		if (obj.gameObject.tag == "Plataforma")
 			obj.gameObject.GetComponent<Renderer> ().material.color = Color.red;
-		}
-
 	}
 }

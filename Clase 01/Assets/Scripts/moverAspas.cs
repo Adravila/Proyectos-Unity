@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Script utilizado para la Escena 3 */
+
 public class moverAspas : MonoBehaviour {
 
 	public float velocidad = 2f;
 	Vector3 rotacion = new Vector3(24,0,0);
 
 	// Use this for initialization
-	void Start () {
-	}
+	void Start () {}
 
 	// Update is called once per frame
 	void Update () {
@@ -17,10 +18,8 @@ public class moverAspas : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision obj){
-		if (obj.gameObject.tag == "Player") {
-			Debug.Log ("choca");
+		if (obj.gameObject.tag == "Player")
 			obj.transform.position = new Vector3(5.9722f,11.850f,-0.121f);
-		}
 	}
 }
 

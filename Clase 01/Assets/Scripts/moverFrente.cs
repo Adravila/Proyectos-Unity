@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Script utilizado para la Escena 3 (cámara) */
+
 public class moverFrente : MonoBehaviour {
 	
 	public GameObject Player;

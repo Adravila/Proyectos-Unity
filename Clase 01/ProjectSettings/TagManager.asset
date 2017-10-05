@@ -12,6 +12,7 @@ TagManager:
   - Meta_2
   - player
   - Meta_3
+  - checkPoint
   layers:
   - Default
   - TransparentFX
