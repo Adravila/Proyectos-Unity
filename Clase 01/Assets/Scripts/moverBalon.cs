@@ -16,14 +16,17 @@ public class moverBalon : MonoBehaviour {
 	void FixedUpdate () {
 		float h = Input.GetAxis ("Horizontal");
 		float v = Input.GetAxis ("Vertical");
+		float s = Input.GetAxis ("Jump");
 		Vector3 vector = new Vector3 (h, 0.5f, v);
+		Vector3 vector_s = new Vector3 (0, s, 0);
 		rb.AddForce (vector * fuerza * Time.deltaTime);
+		rb.AddForce (vector_s * 3000 * Time.deltaTime);
 	}
 
 	void OnTriggerEnter(Collider obj){
 		// Escena 1
 		if (obj.gameObject.tag == "Meta_1") 
-			Application.LoadLevel(0);
+			Application.LoadLevel(1);
 		// Escena 2
 		if (obj.gameObject.tag == "Meta_2") 
 			Application.LoadLevel(2);
