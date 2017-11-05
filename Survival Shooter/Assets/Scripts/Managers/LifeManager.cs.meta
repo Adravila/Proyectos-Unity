@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 47f6c7fc14fae124392e7789e19c69db
+timeCreated: 1509712013
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - heal_1: {fileID: 1157983073660964, guid: 4606815eff7d4ca45a9ec10ddff29cff, type: 2}
+  - heal_2: {instanceID: 0}
+  - heal_3: {instanceID: 0}
+  - player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
