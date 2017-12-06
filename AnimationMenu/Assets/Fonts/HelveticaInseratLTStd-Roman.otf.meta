@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 20b34f9156a6ad147ae0d3689dd7d398
+timeCreated: 1512507728
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Helvetica Inserat LT Std
+  fontNames:
+  - Helvetica Inserat LT Std
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
