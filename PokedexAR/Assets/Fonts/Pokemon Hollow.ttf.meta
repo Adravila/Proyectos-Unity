@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d6019d48908aad64285003a17ab20149
+timeCreated: 1511980995
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pokemon Hollow
+  fontNames:
+  - Pokemon Hollow
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
