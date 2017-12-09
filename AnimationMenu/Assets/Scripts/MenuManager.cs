@@ -13,7 +13,6 @@ public class MenuManager : MonoBehaviour {
 	void Start()
 	{
 		anim = GetComponent<Animator> ();
-
 		// Menú principal
 		Button btn_1 = StartButton.GetComponent<Button>();
 		Button btn_2 = LoadButton.GetComponent<Button>();
@@ -37,8 +36,7 @@ public class MenuManager : MonoBehaviour {
 		btn_8.onClick.AddListener(DifficultyButtonOnClick_3);
 	}
 
-	void PlayOnClick()
-	{
+	void PlayOnClick(){
 		anim.SetTrigger("FadeOut");
 	}
 		
@@ -48,22 +46,25 @@ public class MenuManager : MonoBehaviour {
 
 	void DebugVolverAlMenu(){ SceneManager.LoadScene (0); }	
 
-	void DifficultyOnClick(){ anim.SetTrigger ("FadeMenuChange"); }
+	void DifficultyOnClick(){ 
+		anim.SetTrigger ("FadeMenuChange"); 
+	}
 
-	void ExitOnClick(){ anim.SetTrigger ("FadeExit"); }
+	void ExitOnClick(){ 
+		anim.SetTrigger ("FadeExit"); 
+	}
 
-	void MainReturn(){ anim.SetTrigger ("FadeMainMenu"); }
+	void MainReturn(){ 
+		anim.SetTrigger ("FadeMainMenu"); 
+	}
 
 	void DifficultyButtonOnClick_1(){ 
 		DificultyText.text = "Dificultad: Fácil"; 
-		DifficultyButton.GetComponentInChildren<Text>().text = "Dificultad: Fácil"; 
 	}
 	void DifficultyButtonOnClick_2(){ 
 		DificultyText.text = "Dificultad: Normal"; 
-		DifficultyButton.GetComponentInChildren<Text>().text = "Dificultad: Normal"; 
 	}
 	void DifficultyButtonOnClick_3(){ 
 		DificultyText.text = "Dificultad: Difícil"; 
-		DifficultyButton.GetComponentInChildren<Text>().text = "Dificultad: Difícil"; 
 	}
 }
