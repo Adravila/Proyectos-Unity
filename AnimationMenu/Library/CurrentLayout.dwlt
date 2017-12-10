@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 9738
+  controlID: 18186
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 9781
+  controlID: 18187
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 9739
+  controlID: 18161
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -177.74988, y: -157.70761, z: 325.0139}
+    m_Target: {x: -20.558247, y: -397.77524, z: 176.75864}
     speed: 2
-    m_Value: {x: -177.74988, y: -157.70761, z: 325.0139}
+    m_Value: {x: -20.558247, y: -397.77524, z: 176.75864}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -419,13 +419,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.20783329, y: 0.21711716, z: -0.047370367, w: -0.95258677}
+    m_Target: {x: -0.5451413, y: 0.05198062, z: -0.03389463, w: -0.83604443}
     speed: 2
-    m_Value: {x: -0.2078333, y: 0.21711716, z: -0.047370367, w: -0.95258677}
+    m_Value: {x: -0.5451413, y: 0.05198062, z: -0.03389463, w: -0.83604443}
   m_Size:
-    m_Target: 458.675
+    m_Target: 471.6053
     speed: 2
-    m_Value: 458.675
+    m_Value: 471.6053
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -538,10 +538,10 @@ MonoBehaviour:
     width: 244
     height: 343
   m_TreeViewState:
-    scrollPos: {x: 0, y: 90}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: a6fbffff00000000b82900001c2a0000322a0000422a0000662a0000b02a0000d82a0000e82a0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: b22a0000
+    m_LastClickedID: 10930
+    m_ExpandedIDs: 9efbffff000000003a2a00006e2a0000b22a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -602,19 +602,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Fonts
+    - Assets/Textures
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Fonts
+  - Assets/Textures
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Saged\Documents\Proyectos Unity\AnimationMenu
+  m_LastProjectPath: C:\Users\Saged\Documents\Github\Proyectos-Unity\AnimationMenu
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 11}
-    m_SelectedIDs: 20290000
-    m_LastClickedID: 10528
-    m_ExpandedIDs: 00000000be280000882900004c2b00004e2b000000ca9a3bffffff7f
+    m_SelectedIDs: 88290000
+    m_LastClickedID: 10632
+    m_ExpandedIDs: 00000000c028000090290000542b0000562b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be280000882900004c2b00004e2b000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000c028000090290000542b0000562b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
