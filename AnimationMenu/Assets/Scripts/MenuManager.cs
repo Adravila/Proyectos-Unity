@@ -60,11 +60,15 @@ public class MenuManager : MonoBehaviour {
 
 	void DifficultyButtonOnClick_1(){ 
 		DificultyText.text = "Dificultad: Fácil"; 
+		DifficultyButton.GetComponentInChildren<Text> ().text = "Dificultad: Fácil";
+
 	}
 	void DifficultyButtonOnClick_2(){ 
 		DificultyText.text = "Dificultad: Normal"; 
+		DifficultyButton.GetComponentInChildren<Text> ().text = "Dificultad: Normal";
 	}
 	void DifficultyButtonOnClick_3(){ 
 		DificultyText.text = "Dificultad: Difícil"; 
+		DifficultyButton.GetComponentInChildren<Text> ().text = "Dificultad: Difícil";
 	}
 }
