@@ -48,7 +48,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
         [Header("Prefab Object Settings")]
         public bool isDontDestroyOnLoad = false;
         public bool isFullDebugLogIfError = false;
-        public bool isUseAPIKeyFromPrefab = true;
+        public bool isUseAPIKeyFromPrefab = false;
 
         [Header("Prefab Fields")]
         public string apiKey;
@@ -118,7 +118,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
         public void StartRecord(bool isEnabledVoiceDetection)
         {
             _mediaManager.IsEnabledVoiceDetection = isEnabledVoiceDetection;
-            _mediaManager.StartRecord(); 
+            _mediaManager.StartRecord();
         }
 
         public void StopRecord()

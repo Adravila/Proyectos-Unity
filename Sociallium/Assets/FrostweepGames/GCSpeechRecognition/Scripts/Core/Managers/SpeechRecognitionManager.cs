@@ -116,11 +116,8 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
         private void NetworkResponseEventHandler(NetworkResponse response)
         {
-			if (GCSpeechRecognition.Instance.isFullDebugLogIfError) {
-				Debug.Log (response.error + "\n" + response.response);
-				PlayerPrefs.SetString ("escucha","1");
-
-			}
+            if (GCSpeechRecognition.Instance.isFullDebugLogIfError)
+                Debug.Log(response.error + "\n" + response.response);
 
             switch (response.recognitionType)
             {

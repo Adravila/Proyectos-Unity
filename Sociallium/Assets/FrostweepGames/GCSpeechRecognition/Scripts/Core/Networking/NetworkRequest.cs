@@ -29,7 +29,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
         public void Send()
         {
-			request.SendWebRequest ();
+            request.Send();
         }
     }
 }

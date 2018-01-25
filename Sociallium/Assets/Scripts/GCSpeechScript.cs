@@ -81,7 +81,6 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 			_speechRecognition.apiKey = PlayerPrefs.GetString ("STT");
 			_speechRecognition.RecognitionSuccessEvent += RecognitionSuccessEventHandler;
 			_speechRecognition.NetworkRequestFailedEvent += SpeechRecognizedFailedEventHandler;
-			_speechRecognition.LongRecognitionSuccessEvent += LongRecognitionSuccessEventHandler;
 
 			_startRecordButton = transform.Find("Canvas/Button_StartRecord").GetComponent<Button>();
 			_stopRecordButton = transform.Find("Canvas/Button_StopRecord").GetComponent<Button>();
@@ -120,7 +119,6 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 		{
 			_speechRecognition.RecognitionSuccessEvent -= RecognitionSuccessEventHandler;
 			_speechRecognition.NetworkRequestFailedEvent -= SpeechRecognizedFailedEventHandler;
-			_speechRecognition.LongRecognitionSuccessEvent -= LongRecognitionSuccessEventHandler;
 		}
 
 
@@ -226,43 +224,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 				StartCoroutine (DownloadTheAudio(respuesta.result.fulfillment.speech));
 			}
 		}
-
-		private void LongRecognitionSuccessEventHandler(OperationResponse operation, long index)
-		{
-			if(operation == null)
-				_speechRecognitionResult.text = "ERROR NULL";
-			if (!_isRuntimeDetectionToggle.isOn)
-			{
-				_startRecordButton.interactable = true;
-				_speechRecognitionState.color = Color.green;
-			}
-
-			if (operation != null && operation.response.results != null)
-			{
-				Debug.Log (operation.response.results.Length);
-				if (operation.response.results.Length > 0) {
-					Debug.Log ("Recibido la respuesta de la API de Google Speech to Text");
-					String pregunta = operation.response.results [0].alternatives [0].transcript;
-					_speechRecognitionResult.text = "Long Speech Recognition succeeded! Detected Most useful: " + pregunta;
-					_speechRecognitionResult.text += "\nTime for the recognition: " +
-					(operation.metadata.lastUpdateTime - operation.metadata.startTime).TotalSeconds + "s";
-
-					string urlChatbotRequest = "https://console.dialogflow.com/api/query?v=20170712";
-					string postData = "{\"q\":\"" + pregunta + "\",\"timezone\":\"Europe/Paris\",\"lang\":\"es\",\"sessionId\":\"" + dialogFlowSession + "\",\"resetContexts\":false}";
-
-					StartCoroutine (PostDialogflow (urlChatbotRequest, postData)); //hace request POST a la API v1 de smalltalk
-				} else {
-					_speechRecognitionResult.text = "Speech Recognition succeeded! Words are no detected.";
-					Debug.Log ("Dejar de pensar");
-				}
-			}
-			else
-			{
-				_speechRecognitionResult.text = "Speech Recognition succeeded! Words are no detected.";
-				Debug.Log ("Dejar de pensar");
-			}
-		}
-
+			
 		void animacionModelo(string intent){
 
 			Animator anim = women.GetComponent<Animator> ();

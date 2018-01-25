@@ -53,7 +53,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
                 MonoBehaviour.Destroy(_latestVoiceAudioClip);
 
             _microphoneWorkingAudioClip = Microphone.Start(_microphoneDevice, true, 1, _speechRecognitionManager.CurrentConfig.sampleRate);
-			Debug.Log (_microphoneWorkingAudioClip);
+
             _currentAudioSamples = new float[_microphoneWorkingAudioClip.samples * _microphoneWorkingAudioClip.channels];
 
             IsRecording = true;
@@ -74,7 +74,7 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
 
             if (!IsEnabledVoiceDetection)
-				_latestVoiceAudioClip = MakeAudioClipFromSamples(_currentRecordingVoice.ToArray());
+                _latestVoiceAudioClip = MakeAudioClipFromSamples(_currentRecordingVoice.ToArray());
 
             if (_currentRecordingVoice != null)
                 _currentRecordingVoice.Clear();
@@ -113,9 +113,6 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
                     if (!_isTalking && isTalking)
                     {
-						Debug.Log ("cerrando");
-						//StopRecord ();
-
                         _isTalking = true;
 
                         if (BeginTalkigEvent != null)
