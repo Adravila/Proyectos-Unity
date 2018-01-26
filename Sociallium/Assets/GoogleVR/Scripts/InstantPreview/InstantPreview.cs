@@ -82,7 +82,7 @@ namespace Gvr.Internal {
       public UnityRect rightEyeViewSize;
     }
 
-#if UNITY_HAS_GOOGLEVR && UNITY_EDITOR
+	#if SCREW_YOU && UNITY_EDITOR
     static ResolutionSize[] resolutionSizes = new ResolutionSize[] {
       new ResolutionSize() { width = 2560, height = 1440, },  // ResolutionSize.Big
       new ResolutionSize() { width = 1920, height = 1080, },  // ResolutionSize.Regular

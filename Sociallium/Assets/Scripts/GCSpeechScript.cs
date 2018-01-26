@@ -9,6 +9,7 @@ using System.Collections;
 using System.Text.RegularExpressions;
 using System.Text;
 using UnityEngine.Sprites;
+using UnityEngine.SceneManagement;
 
 namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 {
@@ -113,6 +114,13 @@ namespace FrostweepGames.Plugins.GoogleCloud.SpeechRecognition
 
 			_languageDropdown.value = _languageDropdown.options.IndexOf(_languageDropdown.options.Find(x => x.text == Enumerators.LanguageCode.es_ES.ToString()));
 			StartRecordButtonOnClickHandler ();
+		}
+
+		void Update() {
+			
+			if (Input.GetKeyDown(KeyCode.Escape)) {
+				SceneManager.LoadSceneAsync (0);
+			}
 		}
 
 		private void OnDestroy()

@@ -24,7 +24,7 @@ using UnityEngine;
 public class InstantPreviewHelper : MonoBehaviour {
   public static string AdbPath;
 
-#if UNITY_HAS_GOOGLEVR && UNITY_EDITOR
+  #if SCREW_YOU && UNITY_EDITOR
   [DllImport(InstantPreview.dllName)]
   private static extern bool SetAdbPathAndStart(string adbPath);
 
@@ -62,7 +62,7 @@ public class InstantPreviewHelper : MonoBehaviour {
 #endif
 }
 
-#if !UNITY_HAS_GOOGLEVR && UNITY_EDITOR
+#if !SCREW_YOU && UNITY_EDITOR
 [CustomEditor(typeof(InstantPreviewHelper))]
 public class InstantPreviewHelperEditor : Editor {
   public override void OnInspectorGUI() {

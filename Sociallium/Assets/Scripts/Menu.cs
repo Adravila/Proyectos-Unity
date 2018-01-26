@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour {
 	public Button button_1;
 	public Button button_2;
 	public Button button_3;
+	public Button button_4;
 
 	public Button button_update_STTkey;
 	public Button button_update_TTSkey;
@@ -29,6 +30,7 @@ public class Menu : MonoBehaviour {
 		button_1.onClick.AddListener (app_1_OnClick);	
 		button_2.onClick.AddListener (app_2_OnClick);	
 		button_3.onClick.AddListener (app_3_OnClick);	
+		button_4.onClick.AddListener (app_4_OnClick);	
 		button_update_STTkey.onClick.AddListener (update_STTKey_OnClick);
 		button_update_TTSkey.onClick.AddListener (update_TTSkey_OnClick);
 		StartCoroutine (LoadDevice("none"));
@@ -72,6 +74,9 @@ public class Menu : MonoBehaviour {
 		section_rv.SetActive (false); 
 		section_options.SetActive (true); 
 	}
+
+	void app_4_OnClick(){ Application.Quit (); }
+
 
 	// OPTIONS
 	void update_STTKey_OnClick(){

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if UNITY_HAS_GOOGLEVR && UNITY_EDITOR
+#if SCREW_YOU && UNITY_EDITOR
 using System.Runtime.InteropServices;
 using UnityEngine;
 
